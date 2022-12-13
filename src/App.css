@@ -336,12 +336,12 @@ a {
   }
 
   .bubble {
-    height: 66px;
-    width: 66px;
-    left: -28px;
-    top: -16px;
     z-index: 111111;
     filter: blur(0.178062px);
+    height: 61px;
+    width: 61px;
+    left: -19px;
+    top: -11px;
 
   }
 
@@ -424,9 +424,10 @@ a {
   }
 
   .main.home .cast-card .text h2 {
-    margin-top: 11px;
-    font-size: 10px;
-    line-height: 7px;
+    margin-top: 8px;
+    font-size: 8px;
+    line-height: 10px;
+    font-weight: 200;
 
   }
 
@@ -637,7 +638,7 @@ a {
 
   .main.home .cast-card .text h2 {
     margin-top: 0px;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 11px;
   }
 
@@ -1520,8 +1521,9 @@ a {
   box-sizing: border-box;
   height: fit-content;
   position: relative;
-  overflow: hidden;
 }
+
+
 
 .search {
   background: rgba(255, 255, 255, 0.05);
@@ -1571,12 +1573,12 @@ a {
   border: none;
   background: transparent;
   padding-left: 5px;
-  width: 261px;
   font-family: travel-demi;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   color: #868686;
+  box-sizing: border-box;
 }
 
 .search input:focus {
@@ -1643,6 +1645,55 @@ a {
   pointer-events: none;
 }
 
+
+.Dropdown-control {
+  background-color: var(--sky) !important;
+  border: none !important;
+  border-top-left-radius: 59px !important;
+  border-bottom-left-radius: 59px !important;
+  color: rgb(255, 255, 255);
+  font-family: travel-nr !important;
+  font-size: 16px;
+  padding: 20px 9px 20px 25px;
+  width: 130px;
+}
+
+.Dropdown-arrow {
+  right: 8px !important;
+  top: 27px !important;
+
+}
+
+.Dropdown-menu {
+  background-color: var(--sky) !important;
+  margin-top: 5px !important;
+  border-radius: 5px !important;
+  border: none !important;
+  color: white !important;
+}
+
+.Dropdown-option {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  color: var(--white) !important;
+  font-size: 16px;
+  font-family: travel-nr;
+  font-weight: 500;
+}
+
+.Dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.Dropdown-option:hover {
+  background-color: transparent !important;
+}
+
+.Dropdown-option.is-selected {
+  background-color: #12c5d0 !important;
+}
+
+
+
 /* The cast page responsive */
 @media (min-width:390px) and (max-width:575.99px) {
 
@@ -1659,6 +1710,51 @@ a {
     padding-bottom: 43px;
   }
 
+
+  .Dropdown-control {
+    background-color: var(--sky) !important;
+    border: none !important;
+    border-top-left-radius: 59px !important;
+    border-bottom-left-radius: 59px !important;
+    color: rgb(255, 255, 255);
+    font-family: travel-nr !important;
+    font-size: 10px;
+    padding: 5px 8px 5px 15px;
+    width: 88px;
+  }
+
+  .Dropdown-arrow {
+    right: 6px !important;
+    top: 10px !important;
+  }
+
+  .Dropdown-menu {
+    background-color: var(--sky) !important;
+    margin-top: 5px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    color: white !important;
+  }
+
+  .Dropdown-option {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: var(--white) !important;
+    font-size: 10px;
+    font-family: travel-nr;
+    font-weight: 500;
+  }
+
+  .Dropdown-option:last-child {
+    border-bottom: none;
+  }
+
+  .Dropdown-option:hover {
+    background-color: transparent !important;
+  }
+
+  .Dropdown-option.is-selected {
+    background-color: #12c5d0 !important;
+  }
 
   .main.cast .bg-images {
     padding: 0 20px;
@@ -1682,7 +1778,7 @@ a {
   .filter-area {
     border-radius: 23px;
     height: 24px;
-    width: 181px;
+    width: 195px;
   }
 
   .search {
@@ -1704,8 +1800,6 @@ a {
   }
 
   .search input {
-
-    width: 104px;
     font-size: 8px;
     padding-left: 0;
 
@@ -1780,6 +1874,52 @@ a {
 
 @media (min-width:576px) and (max-width:767.99px) {
 
+
+
+  .Dropdown-control {
+    background-color: var(--sky) !important;
+    border: none !important;
+    border-top-left-radius: 59px !important;
+    border-bottom-left-radius: 59px !important;
+    color: rgb(255, 255, 255);
+    font-family: travel-nr !important;
+    font-size: 10px;
+    padding: 7px 8px 7px 15px;
+    width: 88px;
+  }
+
+  .Dropdown-arrow {
+    right: 6px !important;
+    top: 10px !important;
+  }
+
+  .Dropdown-menu {
+    background-color: var(--sky) !important;
+    margin-top: 5px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    color: white !important;
+  }
+
+  .Dropdown-option {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: var(--white) !important;
+    font-size: 10px;
+    font-family: travel-nr;
+    font-weight: 500;
+  }
+
+  .Dropdown-option:last-child {
+    border-bottom: none;
+  }
+
+  .Dropdown-option:hover {
+    background-color: transparent !important;
+  }
+
+  .Dropdown-option.is-selected {
+    background-color: #12c5d0 !important;
+  }
 
   .main.cast .spiral {
     display: none;
@@ -1915,6 +2055,51 @@ a {
 @media (min-width:768px) and (max-width:991.99px) {
 
 
+  .Dropdown-control {
+    background-color: var(--sky) !important;
+    border: none !important;
+    border-top-left-radius: 59px !important;
+    border-bottom-left-radius: 59px !important;
+    color: rgb(255, 255, 255);
+    font-family: travel-nr !important;
+    font-size: 11px;
+    padding: 7px 8px 7px 15px;
+    width: 88px;
+  }
+
+  .Dropdown-arrow {
+    right: 6px !important;
+    top: 10px !important;
+  }
+
+  .Dropdown-menu {
+    background-color: var(--sky) !important;
+    margin-top: 5px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    color: white !important;
+  }
+
+  .Dropdown-option {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: var(--white) !important;
+    font-size: 11px;
+    font-family: travel-nr;
+    font-weight: 500;
+  }
+
+  .Dropdown-option:last-child {
+    border-bottom: none;
+  }
+
+  .Dropdown-option:hover {
+    background-color: transparent !important;
+  }
+
+  .Dropdown-option.is-selected {
+    background-color: #12c5d0 !important;
+  }
+
   .main.cast .spiral {
     display: none;
   }
@@ -1972,8 +2157,8 @@ a {
   }
 
   .search input {
-    width: 120px;
-    font-size: 10px;
+    width: 127px;
+    font-size: 11px;
     padding-left: 2px;
 
   }
@@ -2049,6 +2234,51 @@ a {
 @media (min-width:992px) and (max-width:1140.99px) {
 
 
+  .Dropdown-control {
+    background-color: var(--sky) !important;
+    border: none !important;
+    border-top-left-radius: 59px !important;
+    border-bottom-left-radius: 59px !important;
+    color: rgb(255, 255, 255);
+    font-family: travel-nr !important;
+    font-size: 12px;
+    padding: 8px 10px 8px 15px;
+    width: 95px;
+  }
+
+  .Dropdown-arrow {
+    right: 6px !important;
+    top: 14px !important;
+  }
+
+  .Dropdown-menu {
+    background-color: var(--sky) !important;
+    margin-top: 5px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    color: white !important;
+  }
+
+  .Dropdown-option {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: var(--white) !important;
+    font-size: 12px;
+    font-family: travel-nr;
+    font-weight: 500;
+  }
+
+  .Dropdown-option:last-child {
+    border-bottom: none;
+  }
+
+  .Dropdown-option:hover {
+    background-color: transparent !important;
+  }
+
+  .Dropdown-option.is-selected {
+    background-color: #12c5d0 !important;
+  }
+
   .main.cast .spiral {
     display: none;
   }
@@ -2105,8 +2335,8 @@ a {
   }
 
   .search input {
-    width: 118px;
-    font-size: 11px;
+    width: 135px;
+    font-size: 12px;
     padding-left: 2px;
 
   }
@@ -2183,6 +2413,52 @@ a {
 
 @media (min-width:1141px) and (max-width:1439.99px) {
 
+
+
+  .Dropdown-control {
+    background-color: var(--sky) !important;
+    border: none !important;
+    border-top-left-radius: 59px !important;
+    border-bottom-left-radius: 59px !important;
+    color: rgb(255, 255, 255);
+    font-family: travel-nr !important;
+    font-size: 14px;
+    padding: 15px 10px 15px 20px;
+    width: 100px;
+  }
+
+  .Dropdown-arrow {
+    right: 6px !important;
+    top: 20px !important;
+  }
+
+  .Dropdown-menu {
+    background-color: var(--sky) !important;
+    margin-top: 5px !important;
+    border-radius: 5px !important;
+    border: none !important;
+    color: white !important;
+  }
+
+  .Dropdown-option {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: var(--white) !important;
+    font-size: 12px;
+    font-family: travel-nr;
+    font-weight: 500;
+  }
+
+  .Dropdown-option:last-child {
+    border-bottom: none;
+  }
+
+  .Dropdown-option:hover {
+    background-color: transparent !important;
+  }
+
+  .Dropdown-option.is-selected {
+    background-color: #12c5d0 !important;
+  }
 
   .main.cast .spiral {
     display: none;

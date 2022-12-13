@@ -8,14 +8,14 @@ const CardsBody = ({ cast, data, loading, searchValue }) => {
     <div className="cards-body">
       {loading ? (
         <CircularProgress />
-      ) : cast == "character" ? (
+      ) : cast == "Character" ? (
         data &&
         data.results
           .filter((e) => e.name.match(new RegExp(searchValue, "i")))
           .map((e) => <CastCard charName={e.name} image={e.image} id={e.id} />)
       ) : loading ? (
         <CircularProgress />
-      ) : cast == "location" ? (
+      ) : cast == "Location" ? (
         <>
           {data &&
             data.results
@@ -24,7 +24,7 @@ const CardsBody = ({ cast, data, loading, searchValue }) => {
                 <DetailsCard subText={`#${e.id}`} mainText={e.name} />
               ))}
         </>
-      ) : cast == "episode" ? (
+      ) : cast == "Episode" ? (
         <>
           {data &&
             data.results

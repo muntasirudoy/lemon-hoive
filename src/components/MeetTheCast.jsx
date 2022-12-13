@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import CastCard from "./CastCard";
-import { Box } from "@mui/material";
+import { Box, CircularProgress } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -11,7 +11,9 @@ import { breakpoint } from "../helper";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 const MeetTheCast = () => {
-  const { data } = useFetch("https://rickandmortyapi.com/api/character");
+  const { data, loading } = useFetch(
+    "https://rickandmortyapi.com/api/character"
+  );
 
   return (
     <div className="mbl-area all-cast">
@@ -34,12 +36,17 @@ const MeetTheCast = () => {
             className="mySwiper"
             breakpoints={breakpoint}
           >
-            {data &&
+            {loading ? (
+              <CircularProgress />
+            ) : data ? (
               data.results.map((e) => (
-                <SwiperSlide key={e.id}>
+                <SwiperSlide>
                   <CastCard charName={e.name} image={e.image} id={e.id} />
                 </SwiperSlide>
-              ))}
+              ))
+            ) : (
+              "No data is available"
+            )}
           </Swiper>
         </div>
       </div>

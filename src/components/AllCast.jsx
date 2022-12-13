@@ -5,21 +5,22 @@ import {
   RiArrowRightCircleLine,
 } from "react-icons/ri";
 import { BiLeftArrowCircle } from "react-icons/bi";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 import useFetch from "../hooks/useFetch"; // fetching custom hooks
 import CircularProgress from "@mui/material/CircularProgress";
 import CardsBody from "./CardsBody"; //all cards body
 const AllCast = () => {
   const [fetchLink, setFetchLink] = useState(""); //state for fetch link
-  const [cast, setCast] = useState("character"); // state fo set dropdown value
+  const [cast, setCast] = useState("Character"); // state fo set dropdown value
   const [searchValue, setSearchValue] = useState("");
   // data fetching
   const { data, loading } = useFetch(
     fetchLink || "https://rickandmortyapi.com/api/character"
   );
+
+  const options = ["Character", "Location", "Episode"];
 
   // function to go next page
   const nextPrevPage = (link) => {
@@ -27,8 +28,9 @@ const AllCast = () => {
   };
   // dropdown
   const handleChange = (event) => {
-    setCast(event.target.value);
-    setFetchLink(`https://rickandmortyapi.com/api/${event.target.value}`);
+    let path = event.value.toLowerCase();
+    setCast(event.value);
+    setFetchLink(`https://rickandmortyapi.com/api/${path}`);
   };
   if (loading) {
     return (
@@ -54,21 +56,13 @@ const AllCast = () => {
           <h1 className="the-cast-title">The Cast</h1>
           {/* Page header */}
           <div className="filter-area">
-            <div className="dropdown">
-              <FormControl sx={{ m: 1, minWidth: 120 }}>
-                <Select
-                  value={cast}
-                  onChange={handleChange}
-                  displayEmpty
-                  inputProps={{ "aria-label": "Without label" }}
-                  IconComponent={KeyboardArrowDownIcon}
-                >
-                  <MenuItem value="character">Characters</MenuItem>
-                  <MenuItem value="location">Locations</MenuItem>
-                  <MenuItem value="episode">Episodes</MenuItem>
-                </Select>
-              </FormControl>
-            </div>
+            <Dropdown
+              options={options}
+              value={cast}
+              onChange={handleChange}
+              placeholder="Select an option"
+            />
+
             <div className="search">
               <RiSearch2Line />
               <input

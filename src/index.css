@@ -126,14 +126,17 @@ body {
     margin-left: 0px !important;
   }
 
-  .css-6hp17o-MuiList-root-MuiMenu-list {
+  .css-qiwgdb .css-6hp17o-MuiList-root-MuiMenu-list {
     padding: 0 !important;
   }
 
-  .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+
+
+  .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root,
+  .css-qiwgdb {
     font-size: 8px !important;
     padding: 6px 15px !important;
-    line-height: 10px !important;
+    line-height: 8px !important;
     min-height: 20px !important;
   }
 
@@ -392,6 +395,8 @@ body {
   .MuiFormControl-root {
     min-width: 110px !important;
   }
+
+
 
   .css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
     color: white !important;
