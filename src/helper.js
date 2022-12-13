@@ -1,5 +1,9 @@
 //  slider breakpoints
 export const breakpoint = {
+  320: {
+    width: 320,
+    slidesPerView: 3,
+  },
   380: {
     width: 380,
     slidesPerView: 3,
@@ -36,6 +40,10 @@ export const breakpoint = {
 };
 
 export const breakpointDetails = {
+  320: {
+    width: 320,
+    slidesPerView: 2.5,
+  },
   380: {
     width: 380,
     slidesPerView: 2.8,

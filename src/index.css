@@ -85,7 +85,7 @@ body {
 }
 
 
-@media (min-width:390px) and (max-width:575.99px) {
+@media (min-width:320px) and (max-width:575.99px) {
 
   .swiper-button-next,
   .swiper-button-prev {
